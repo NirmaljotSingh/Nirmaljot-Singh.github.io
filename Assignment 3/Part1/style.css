@@ -30,6 +30,11 @@
       }
 
       a:hover {
+        color: green;
         text-decoration: none;
       }
-    
+      .contact-information {
+        background-color: #eeeeee;
+        border: 5px solid purple;
+        padding: 5px
+      }
