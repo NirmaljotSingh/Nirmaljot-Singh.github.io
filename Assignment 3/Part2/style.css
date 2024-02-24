@@ -3,3 +3,15 @@ html {
 }
 
 /* Your CSS below here */
+
+div{
+  width: 300px;
+  height: 300px;
+  margin: auto; 
+  text-align: center;
+  line-height: 300px; 
+  font-size: 1.063rem; /* I used 1.063 rem which is basically 17 px as I checked on converting tool.*/
+  background-color: red;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
