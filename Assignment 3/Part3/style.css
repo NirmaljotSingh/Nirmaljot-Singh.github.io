@@ -43,3 +43,49 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+@font-face {
+  font-family: 'Courier-Prime';
+  src: url(Fonts/Courier-Prime/Courier-Prime.ttf) format("truetype");
+  src: url(Fonts/Courier-Prime/Courier-Prime-Bold.ttf) format("truetype");
+  font-weight: normal;
+  font-style:normal;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url(Fonts/roboto/Roboto-Black.ttf) format("truetype");
+  font-weight: normal;
+  font-style:normal;
+}
+
+html {
+  font-family: 'Courier-Prime' , serif , monospace;
+  font-size: 10px;
+}
+
+h1, h2 {
+  font-family: 'roboto', sans-serif , monospace;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+
+}
+
+p , li {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  word-spacing: 1px;
+}
+
+section h2 + p {
+  text-indent: 20px;
+}
