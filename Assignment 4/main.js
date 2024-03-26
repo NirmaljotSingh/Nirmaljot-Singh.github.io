@@ -29,3 +29,31 @@ const insertZ = [
     'melted into a puddle on the sidewalk',
     'turned into a slug and crawled away'
 ];
+
+randomize.addEventListener('click', result);
+
+function result() {
+    let newStory = storyText;
+
+    const xItem = randomValueFromArray(insertX);
+    const yItem = randomValueFromArray(insertY);
+    const zItem = randomValueFromArray(insertZ);
+
+    newStory = newStory.replaceAll(':insertx:',xItem);
+    newStory = newStory.replace(':inserty:',yItem);
+    newStory = newStory.replace(':insertz:',zItem);
+
+  if(customName.value !== '') {
+    const name = customName.value;
+    newStory = newStory.replace('Bob',name);
+  }
+
+  if(document.getElementById("uk").checked) {
+    const weight = Math.round(300);
+    const temperature =  Math.round(94);
+
+  }
+
+  story.textContent = ;
+  story.style.visibility = 'visible';
+}
