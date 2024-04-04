@@ -3,6 +3,10 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
+let count = 0;
+
+var element = document.getElementById("mypara");
+
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
@@ -164,17 +168,29 @@ while (balls.length < 25) {
   element.innerHTML = 'Ball count: ' + count;
 }
 
-function loop() {
+let evilcircle = new EvilCircle(
+  random(0,width),
+  random(0,height)
+)
+
+
+function evilloop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
+    if(ball.exists)
+    {
     ball.draw();
     ball.update();
     ball.collisionDetect();
   }
+}
+evilcircle.draw();
+evilcircle.checkBounds();
+evilcircle.collisionDetect();
 
-  requestAnimationFrame(loop);
+  requestAnimationFrame(evilloop);
 }
 
-loop();
+evilloop();
